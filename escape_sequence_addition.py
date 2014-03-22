@@ -15,7 +15,7 @@ def main():
   text=sys.stdin.readlines()
   for line in text:
     x=re.sub('\@',r'\@',line)
-    #x=re.sub('\^','\^',x)
+    x=re.sub('\^','\^',x)
     #x=re.sub('\$','\$',x)
     x=re.sub('\<','\<',x)
     x=re.sub('\>','\>',x)
