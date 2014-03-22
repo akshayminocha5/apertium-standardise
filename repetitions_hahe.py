@@ -20,7 +20,10 @@ def ambiguated_output(list_of_tokens):
 
 def main():
   lang=open("temp_language").read().split()[0]
-  d=pickle.load(open("hahe_"+lang))
+  try:
+    d=pickle.load(open("hahe_"+lang))
+  except:
+    d={}
   dl=[] 
   for line in sys.stdin.readlines():
     new_line=[]
