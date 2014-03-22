@@ -16,7 +16,7 @@ def main():
   for line in text:
     x=re.sub('\@',r'\@',line)
     x=re.sub('\^','\^',x)
-    #x=re.sub('\$','\$',x)
+    x=re.sub('\$','\$',x)
     x=re.sub('\<','\<',x)
     x=re.sub('\>','\>',x)
     #x=re.sub('\}','\}',x)
