@@ -52,6 +52,10 @@ def main():
     dl=disambiguated_output_line(line)
     new_sent=[]
     for word_tokens in dl:
+      best_word=word_tokens[-1]
+      if best_word[0]=="<" and best_word[-1]==">":
+        new_sent+=[word_tokens[-1][1:-1]]
+        continue
       new_sent+=[word_tokens[-1]]
     print " ".join(new_sent)
 
